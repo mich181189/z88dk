@@ -20,7 +20,7 @@ before_script:
   - export PATH=`pwd`/bin:$PATH
   - export ZCCCFG=`pwd`/lib/config
   - eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
-  - cpanm Template
+  - cpanm Template Template::Plugin::YAML
 
 script: 
   - make -C src/z80asm test && make && make -C libsrc && make -C libsrc install && make -C libsrc/_DEVELOPMENT && make -C examples && make -C test
