@@ -26,7 +26,7 @@ before_script:
   - cpanm Template::Plugin::YAML
   - cpanm Modern::Perl
   - cpanm Test::Differences
-  - cpanm CPU::Z80::Assembler
+  - cpan CPU::Z80::Assembler
 #  - cpanm Capture::Tiny
 #  - cpanm Capture::Tiny::Extended
 
