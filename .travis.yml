@@ -24,8 +24,9 @@ before_script:
   - cpanm File::Slurp
   - cpanm Template
   - cpanm Template::Plugin::YAML
-#  - cpanm Modern::Perl
-#  - cpanm CPU::Z80::Assembler
+  - cpanm Modern::Perl
+  - cpanm Test::Differences
+  - cpanm CPU::Z80::Assembler
 #  - cpanm Capture::Tiny
 #  - cpanm Capture::Tiny::Extended
 
