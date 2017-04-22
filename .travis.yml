@@ -13,6 +13,7 @@ compiler:
 before_script: 
   - export PATH=`pwd`/bin:$PATH
   - export ZCCCFG=`pwd`/lib/config
+  - cpan Template
 
 script: 
   - make -C src/z80asm test && make && make -C libsrc && make -C libsrc install && make -C libsrc/_DEVELOPMENT && make -C examples && make -C test
