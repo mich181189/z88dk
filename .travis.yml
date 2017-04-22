@@ -1,4 +1,4 @@
-sudo: required
+sudo: false
 
 language: c
 
@@ -12,12 +12,14 @@ compiler:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install cpanminus -y
-  - cpanm Template
+  - sudo apt-get install -y cpanminus
+  - sudo apt-get install -y liblocal-lib-perl
+  - cpanm --local-lib=~/perl5 Template
 
 before_script: 
   - export PATH=`pwd`/bin:$PATH
   - export ZCCCFG=`pwd`/lib/config
+  - eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
 script: 
   - make -C src/z80asm test && make && make -C libsrc && make -C libsrc install && make -C libsrc/_DEVELOPMENT && make -C examples && make -C test
