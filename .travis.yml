@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 
 language: c
 
@@ -12,7 +12,7 @@ compiler:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install cpanminus
+  - sudo apt-get install cpanminus -y
   - cpanm Template
 
 before_script: 
